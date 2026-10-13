@@ -1,0 +1,312 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f5f7;
+    color: #222;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* ---------- Navigation ---------- */
+
+.site-header {
+    width: 100%;
+    background-color: #1f2937;
+}
+
+.navbar {
+    width: 90%;
+    max-width: 75rem;
+    margin: auto;
+    padding: 1rem 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo {
+    color: white;
+    font-size: 1.6rem;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    color: white;
+    font-size: 0.95rem;
+    padding: 0.3rem;
+}
+
+
+/* ---------- Dashboard Container ---------- */
+
+.dashboard {
+    width: 90%;
+    max-width: 75rem;
+    margin: auto;
+    padding: 3rem 0;
+}
+
+.page-heading {
+    margin-bottom: 2rem;
+}
+
+.page-heading h1 {
+    margin: 0.4rem 0;
+    font-size: clamp(1.9rem, 4vw, 2.6rem);
+}
+
+.label,
+.card-label {
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+
+/* ---------- Summary Cards ---------- */
+
+.summary-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 1rem;
+}
+
+.summary-card {
+    flex: 1 1 12rem;
+    min-width: 0;
+    min-height: 9rem;
+    padding: 1.3rem;
+
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 0.6rem;
+}
+
+.summary-card h2 {
+    margin: 0.3rem 0;
+    font-size: 2rem;
+}
+
+
+/* ---------- Dashboard Panels ---------- */
+
+.dashboard-panels {
+    margin-top: 2rem;
+
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.panel {
+    min-width: 0;
+    padding: 1.5rem;
+
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 0.6rem;
+}
+
+.status-panel {
+    flex: 1;
+}
+
+.orders-panel {
+    flex: 2;
+}
+
+.panel h2 {
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+
+/* ---------- Status Rows ---------- */
+
+.status-row {
+    padding: 0.9rem 0;
+    border-bottom: 1px solid #e2e2e2;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.status-row:last-child {
+    border-bottom: none;
+}
+
+
+/* ---------- Orders ---------- */
+
+.order {
+    padding: 0.9rem 0;
+    border-bottom: 1px solid #e2e2e2;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.order:last-child {
+    border-bottom: none;
+}
+
+.order h3 {
+    font-size: 1rem;
+}
+
+.order p {
+    font-size: 0.85rem;
+    overflow-wrap: anywhere;
+}
+
+
+/* ---------- Status Labels ---------- */
+
+.status {
+    padding: 0.3rem 0.5rem;
+    border-radius: 0.3rem;
+    font-size: 0.75rem;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.delivered {
+    background-color: #d9f2df;
+}
+
+.on-way {
+    background-color: #dcecff;
+}
+
+.pending {
+    background-color: #fff0c9;
+}
+
+.delayed {
+    background-color: #ffdcdc;
+}
+
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+    padding: 1.5rem;
+    text-align: center;
+    background-color: #1f2937;
+    color: white;
+}
+
+
+/* =========================================
+   MEDIA QUERY 1 - TABLET
+   Below 768px
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .nav-links {
+        justify-content: center;
+    }
+
+    /* Summary cards get a comfortable tablet width */
+    .summary-card {
+        flex: 1 1 calc(50% - 1rem);
+    }
+
+    /* Main panels are stacked on smaller screens */
+    .dashboard-panels {
+        flex-direction: column;
+    }
+
+    .status-panel,
+    .orders-panel {
+        width: 100%;
+    }
+}
+
+
+/* =========================================
+   MEDIA QUERY 2 - MOBILE
+   Below 480px
+   ========================================= */
+
+@media (max-width: 480px) {
+
+    .dashboard {
+        width: 92%;
+        padding: 2rem 0;
+    }
+
+    .logo {
+        font-size: 1.4rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+
+    .nav-links a {
+        font-size: 0.9rem;
+    }
+
+    /* One summary card per row on mobile */
+    .summary-card {
+        flex-basis: 100%;
+    }
+
+    .panel {
+        padding: 1rem;
+    }
+
+    .panel h2 {
+        font-size: 1.2rem;
+    }
+
+    .order {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .status {
+        white-space: normal;
+    }
+}

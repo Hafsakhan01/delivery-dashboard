@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery Operations Dashboard</title>
+    <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="site-header">
+        <div class="navbar">
+
+            <a href="#" class="logo">DeliveryPro</a>
+
+            <nav class="nav-links">
+                <a href="#">Dashboard</a>
+                <a href="#">Orders</a>
+                <a href="#">Tracking</a>
+                <a href="#">Reports</a>
+                <a href="#">Drivers</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <main class="dashboard">
+
+        <!-- Page Heading -->
+        <section class="page-heading">
+            <p class="label">OPERATIONS</p>
+            <h1>Delivery Dashboard</h1>
+            <p>Monitor today's deliveries, orders, and delivery status.</p>
+        </section>
+
+
+        <!-- Summary Cards -->
+        <section class="summary-container">
+
+            <article class="summary-card">
+                <p class="card-label">TOTAL DELIVERIES</p>
+                <h2>120</h2>
+                <p>Deliveries scheduled today</p>
+            </article>
+
+            <article class="summary-card">
+                <p class="card-label">DELIVERED</p>
+                <h2>76</h2>
+                <p>Orders successfully delivered</p>
+            </article>
+
+            <article class="summary-card">
+                <p class="card-label">PENDING</p>
+                <h2>29</h2>
+                <p>Orders waiting for delivery</p>
+            </article>
+
+            <article class="summary-card">
+                <p class="card-label">DELAYED</p>
+                <h2>15</h2>
+                <p>Orders currently delayed</p>
+            </article>
+
+        </section>
+
+
+        <!-- Main Dashboard Panels -->
+        <section class="dashboard-panels">
+
+            <!-- Delivery Status -->
+            <article class="panel status-panel">
+                <h2>Delivery Status</h2>
+
+                <div class="status-row">
+                    <span>Delivered</span>
+                    <strong>76</strong>
+                </div>
+
+                <div class="status-row">
+                    <span>On the Way</span>
+                    <strong>19</strong>
+                </div>
+
+                <div class="status-row">
+                    <span>Pending</span>
+                    <strong>14</strong>
+                </div>
+
+                <div class="status-row">
+                    <span>Delayed</span>
+                    <strong>11</strong>
+                </div>
+            </article>
+
+
+            <!-- Recent Orders -->
+            <article class="panel orders-panel">
+                <h2>Recent Orders</h2>
+
+                <div class="order">
+                    <div>
+                        <h3>Order #DP-1024</h3>
+                        <p>Hyderabad → Latifabad</p>
+                    </div>
+                    <span class="status delivered">Delivered</span>
+                </div>
+
+                <div class="order">
+                    <div>
+                        <h3>Order #DP-1025</h3>
+                        <p>Hyderabad → Qasimabad</p>
+                    </div>
+                    <span class="status on-way">On the Way</span>
+                </div>
+
+                <div class="order">
+                    <div>
+                        <h3>Order #DP-1026</h3>
+                        <p>Hyderabad → Saddar</p>
+                    </div>
+                    <span class="status pending">Pending</span>
+                </div>
+
+                <div class="order">
+                    <div>
+                        <h3>Order #DP-1027</h3>
+                        <p>Hyderabad → Citizen Colony</p>
+                    </div>
+                    <span class="status delayed">Delayed</span>
+                </div>
+
+            </article>
+
+        </section>
+
+    </main>
+
+
+    <footer class="site-footer">
+        <p>&copy; 2026 DeliveryPro Operations Dashboard</p>
+    </footer>
+
+</body>
+</html>
